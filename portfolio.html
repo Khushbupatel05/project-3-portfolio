@@ -7,13 +7,14 @@
     <title>Document</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <div class="loader">
     <img src="./assets/img/Eclipse@1x-1.0s-200px-200px.gif" alt="">
 </div>
 
-<body class="bg-img2">
+<body class="bg-img2 ">
     <header class="">
         <div class="top-header">
             <div class="container d-flex justify-content-between align-items-center">
@@ -66,18 +67,25 @@
                     </ul>
                 </nav>
 
-               
+
 
                 <nav id="navmenu" class="navmenu ">
                     <ul>
-                        <li class=""><a href="index.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Home</a></li>
-                        <li><a href="about.html" class="active fs-4 fw-bold text-white p-3 text-decoration-none">About</a></li>
-                        <li><a href="resume.html " class="fs-4 fw-bold text-white p-3 text-decoration-none">Resume</a></li>
-                        <li><a href="services.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Services</a></li>
-                        <li><a href="services.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Services</a></li>
-                        <li><a href="portfolio.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Portfolio</a></li>
-                       
-                        <li><a href="contact.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Contact</a></li>
+                        <li class=""><a href="index.html"
+                                class="fs-4 fw-bold text-white p-3 text-decoration-none">Home</a></li>
+                        <li><a href="about.html"
+                                class="active fs-4 fw-bold text-white p-3 text-decoration-none">About</a></li>
+                        <li><a href="resume.html " class="fs-4 fw-bold text-white p-3 text-decoration-none">Resume</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="fs-4 fw-bold text-white p-3 text-decoration-none">Services</a></li>
+                        <li><a href="services.html"
+                                class="fs-4 fw-bold text-white p-3 text-decoration-none">Blog</a></li>
+                        <li><a href="portfolio.html"
+                                class="fs-4 fw-bold text-white p-3 text-decoration-none">Portfolio</a></li>
+
+                        <li><a href="contact.html" class="fs-4 fw-bold text-white p-3 text-decoration-none">Contact</a>
+                        </li>
                     </ul>
                     <i class="mobile-nav-toggle d-lg-none bi bi-list"></i>
                 </nav>
@@ -85,11 +93,10 @@
             </div>
         </div>
     </header>
-    <section>
+    <section class="position-relative z-n1">
         <div class="container">
             <div class="bg-color mt-4">
-                <div class=""data-aos="fade-right"data-aos-easing="linear"
-                data-aos-duration="1000">
+                <div class="" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
                     <h2 class="about-title fw-semibold p-0 fs-6">PORTFOLIO</h2>
                     <p class="fs-2 fw-bolder">MY WORKS</p>
                 </div>
@@ -105,8 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row gy-4 grid" data-aos="fade-up"  data-aos-easing="linear"
-                data-aos-duration="1000" >
+                <div class="row gy-4 grid" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                     <div class="col-lg-6 col-md-6 grid-item web-layout">
                         <a href="https://khushbupatel05.github.io/Selecao/">
                             <div class="portfolio-image ">
@@ -139,15 +145,22 @@
             </div>
 
         </div>
-        
+
     </section>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <script>
+         $(document).ready(function () {
+            $('.mobile-nav-toggle').on('click', function () {
+                $('body').toggleClass('mobile-nav-active');
+                $(this).toggleClass('bi-list bi-x')
+            })
+
+        })
         AOS.init();
-        $(window).on('load', function (){
-          $(".loader").fadeOut(5000)
+        $(window).on('load', function () {
+            $(".loader").fadeOut(5000)
         })
         $(document).ready(function () {
             var $grid = $('.grid').isotope({
@@ -160,6 +173,9 @@
                 $grid.isotope({ filter: filterValue });
             });
         })
+        $()
+
+       
     </script>
 </body>
 
